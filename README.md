@@ -1,4 +1,4 @@
-# Zoomer Training Data Reconstruction
+# Zoomer Challenge (Training Data Reconstruction)
 
 This project documents my solution to the Zoomer Challenge from the PINE 26 seminar. The task was to analyze an authentication executable, recover its embedded machine learning model, and reconstruct 18 hidden training images. Submissions were evaluated using mean cosine similarity across the hidden samples.
 
