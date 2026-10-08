@@ -14,10 +14,10 @@ Expected input:
 
 Typical Colab usage:
 
-    python3 scripts/semantic_retrieval_variants.py \
-      --pool-dir outputs/retrieval_pool \
+    python3 analysis/semantic_retrieval_variants.py \
+      --pool-dir analysis/retrieval_pool \
       --encoder clip \
-      --output-root outputs/semantic_variants_clip \
+      --output-root analysis/semantic_variants_clip \
       --max-pool 500
 """
 

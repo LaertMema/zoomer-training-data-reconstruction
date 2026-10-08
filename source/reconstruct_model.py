@@ -3,7 +3,7 @@
 
 Run from the repository root after installing torch and torchvision:
 
-    python3 scripts/reconstruct_model.py
+    python3 analysis/reconstruct_model.py
 
 The script intentionally prints checkpoints for the core reverse-engineering
 assumptions: blob size, state-dict loading, and logits for dumped binary input

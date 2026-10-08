@@ -63,14 +63,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=123)
     parser.add_argument("--timeout", type=int, default=20)
     parser.add_argument(
-        "--clean",
-        action="store_true",
-        help=(
-            "Delete existing JPG, JPEG, and PNG files in --export-dir before "
-            "downloading. Without this flag, existing files are preserved."
-        ),
-    )
-    parser.add_argument(
         "--min-label-matches",
         type=int,
         default=0,
@@ -204,10 +196,9 @@ def main() -> int:
         raise SystemExit("no classes provided")
 
     args.export_dir.mkdir(parents=True, exist_ok=True)
-    if args.clean:
-        for old_file in args.export_dir.iterdir():
-            if old_file.is_file() and old_file.suffix.lower() in {".jpg", ".jpeg", ".png"}:
-                old_file.unlink()
+    for old_file in args.export_dir.iterdir():
+        if old_file.is_file() and old_file.suffix.lower() in {".jpg", ".jpeg", ".png"}:
+            old_file.unlink()
 
     class_map = load_class_map(args.metadata_cache)
     resolved = resolve_labels(classes, class_map)

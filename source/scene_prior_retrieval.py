@@ -139,11 +139,7 @@ def read_pil(path: Path) -> object | None:
 def load_prompts(path: Path | None) -> list[str]:
     if path is None:
         return DEFAULT_PROMPTS
-    prompts = [
-        line.strip()
-        for line in path.read_text().splitlines()
-        if line.strip() and not line.lstrip().startswith("#")
-    ]
+    prompts = [line.strip() for line in path.read_text().splitlines() if line.strip()]
     if not prompts:
         raise SystemExit(f"prompt file is empty: {path}")
     return prompts
