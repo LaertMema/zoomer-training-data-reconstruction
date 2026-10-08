@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local secrets and editor state
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+
+# Recovered or downloaded artifacts
+artifacts/
+data/
+datasets/
+outputs/
+analysis/
+executables/
+solution/
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.ras
+*.zip
+*.pdf
+
+# Generated reports and media
+*.csv
+*.jpg
+*.jpeg
+*.png
+*.log
+
+# Platform metadata
+*:Zone.Identifier
+.DS_Store
